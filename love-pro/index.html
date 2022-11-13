@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>kunkun</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        #kunkun {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #kunImg {
+            width: 300px;
+            height: 190px;
+            position: absolute;
+            left: 36%;
+            top: 44%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="text" :style="{opacity}">
+    </div>
+    <canvas id="pinkboard">
+
+  </canvas>
+    <div id="kunkun"></div>
+
+    <video id="v1" autoplay muted loop style="width: 100%;height: 100%;object-fit: cover;">
+  <source src="./花瓣飘落.mp4">
+  </video>
+    <script src="./vue.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        let kunkun = document.getElementById("kunkun");
+        let kunImg = document.createElement("img");
+        kunImg.setAttribute("id", "kunImg")
+        kunImg.setAttribute("src", "https://pic1.imgdb.cn/item/636f77c216f2c2beb1fd6d01.jpg");
+        setTimeout(() => {
+            console.log(kunkun, kunImg);
+            kunkun.appendChild(kunImg)
+        }, 2000);
+    </script>
+</body>
+
+</html>
